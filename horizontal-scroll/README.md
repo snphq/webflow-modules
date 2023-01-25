@@ -13,17 +13,12 @@ Add script link to footer:
 ```
 
 ## Usage
-Best way is to copy prepared "gallery" block with horizontall scroll from SNP webflow account: "modules" folder, "Horizontall scroll" project. Then add your own styles instead "gallery" class styles.
-index.css can help to escape custom code styles:
-```css
-.wm-hs-track-wrapper {
-  overflow: hidden;
-}
 
-.wm-hs-track {
-  width: max-content;
-}
-```
+### - Simple copy / paste from webflow account (recommended)
+
+Copy prepared "gallery" block with horizontall scroll from SNP webflow account: "modules" folder, "Horizontall scroll" project. Then customize "gallery" and "gallery-item" elements with your own classes and designs.
+
+### - Creating html and styles from scratch
 
 **html structure:**
 ```html
