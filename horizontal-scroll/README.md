@@ -1,6 +1,7 @@
 ## HORIZONTAL SCROLL
 
 ## <a href="https://horizontall-scroll-a2154a.webflow.io" target="_blank">DEMO</a>
+[DEMO]([url](https://horizontall-scroll-a2154a.webflow.io)){:target="_blank"}
 
 ## Installation
 Add styles link to head:
