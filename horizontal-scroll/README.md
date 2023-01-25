@@ -1,4 +1,4 @@
-## HORIZONTAL SCROLL
+# HORIZONTAL SCROLL
 
 ## [DEMO](https://horizontall-scroll-a2154a.webflow.io)
 
