@@ -1,4 +1,4 @@
-## webflow module - horizontall scroll
+## HORIZONTAL SCROLL
 
 ## DEMO - https://horizontall-scroll-a2154a.webflow.io
 
