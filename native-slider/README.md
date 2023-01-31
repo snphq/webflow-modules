@@ -14,59 +14,70 @@ Add script link to footer:
 
 ## Usage
 
+### Optional functions:
+
+Controls buttons:
+```html
+<div wm-ns-prev></div>
+<div wm-ns-next></div>
+```
+
+Mouse dragging (add "draggable" value):
+```html
+<div wm-ns-list="draggable">...</div>
+```
+
 ### - Simple copy / paste from webflow account (recommended)
 
-Copy prepared "gallery" block with horizontall scroll from SNP webflow account: "modules" folder, "Horizontall scroll" project. Then customize "gallery" and "gallery-item" elements with your own classes and designs.
+Copy prepared block with slider from SNP webflow account: "modules" folder, "Native slider" project. Then customize "slider", "slide", "nav", "btn" elements with your own classes and designs.
+
+Add disabled navigation button styles for "m_wm-ns-disabled" classname.
 
 ### - Creating html and styles from scratch
 
 **html structure:**
 ```html
-<div class="wm-hs" wm-hs>
-    <div class="wm-hs-container">
-      <div class="wm-hs-track-wrapper">
-        <div class="wm-hs-track" wm-hs-track>
-          <div></div>
-          <div></div>
-          ...
-        </div>
-      </div>
-    </div>
+<div wm-ns>
+  <div wm-ns-list="draggable" class="slider">
+    <div class="slide">Slide 1</div>
+    <div class="slide">Slide 2</div>
+    <div class="slide">Slide 3</div>
+    <div class="slide">Slide 4</div>
+    <div class="slide">Slide 5</div>
+    <div class="slide">Slide 6</div>
+    <div class="slide">Slide 7</div>
+    <div class="slide">Slide 8</div>
   </div>
+
+  <div>
+    <div wm-ns-prev class="m_wm-ns-disabled">previous</div>
+    <div wm-ns-next>next</div>
+  </div>
+</div>
   ```
 
   **styles:**
   ```css
-  .wm-hs {
-  width: 100%;
-  position: relative;
-  min-height: 100vh;
-}
-
-.wm-hs-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.wm-hs-track-wrapper {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.wm-hs-track {
-  height: 100%;
-  position: relative;
+.slider {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  gap: 10px;
+  overflow: auto;
+}
+
+.slide {
   flex-shrink: 0;
-  width: max-content;
+  flex-grow: 0;
+}
+
+.slide:first-child {
+  margin-left: 20px;
+}
+
+.slide:last-child {
+  margin-right: 20px;
+}
+
+.m_wm-ns-disabled {
+  opacity: 0.7;
 }
 ```
