@@ -5,11 +5,11 @@
 ## Installation
 Add styles link to head:
 ```html
-<link href="https://cdn.jsdelivr.net/gh/snphq/webflow-modules/native-slider/1.0.1/index.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/gh/snphq/webflow-modules/native-slider/1.0.2/index.min.css" rel="stylesheet" type="text/css">
 ```
 Add script link to footer:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/snphq/webflow-modules/native-slider/1.0.1/index.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/snphq/webflow-modules/native-slider/1.0.2/index.min.js" type="text/javascript"></script>
 ```
 
 ## Usage
