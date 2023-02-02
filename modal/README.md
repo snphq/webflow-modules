@@ -53,7 +53,7 @@ Example how to create your own animation:
 
 `wm-m-close="menu"` - hide modal button attribute.
 
-`wm-m="menu"` - modal element.
+`wm-m="menu"` - modal element attribute.
 
 ### - Simple copy / paste from webflow account (recommended)
 
