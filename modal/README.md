@@ -47,11 +47,13 @@ Example how to create your own animation:
 
 ### core components
 
-**menu** modal key, common for current modal, open and close buttons.
-**wm-m-open="menu"** show modal button attribute.
-**wm-m-close="menu"** hide modal button attribute.
-**wm-m="menu"** modal element.
+`menu` - modal key, common for current modal, open and close buttons.
 
+`wm-m-open="menu"` - show modal button attribute.
+
+`wm-m-close="menu"` - hide modal button attribute.
+
+`wm-m="menu"` - modal element.
 
 ### - Simple copy / paste from webflow account (recommended)
 
