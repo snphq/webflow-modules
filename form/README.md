@@ -40,7 +40,7 @@ Add error styles for field and field-error with classname `m_wm-f-field-error`.
       wm-f-field="name"
       wm-f-required="name is required"
       class="input"
-      placeholder="name"
+      placeholder="name*"
     />
     <div wm-f-field-error="name" class="field-error"></div>
   </div>
@@ -51,7 +51,8 @@ Add error styles for field and field-error with classname `m_wm-f-field-error`.
       wm-f-required="email is required"
       wm-f-email="must be email"
       class="input"
-      placeholder="email"
+      placeholder="email*"
+      type="email"
     />
     <div wm-f-field-error="email" class="field-error"></div>
   </div>
