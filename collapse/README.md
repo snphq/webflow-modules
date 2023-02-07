@@ -1,115 +1,104 @@
-## FORM
+## COLLAPSE
 
-## <a href="https://form-63d2ee.webflow.io/" target="_blank">DEMO</a>
+## <a href="https://collapse-bdd35e.webflow.io/" target="_blank">DEMO</a>
 
 ## Installation
+
+Add styles to footer:
+```html
+<style>
+[wm-c-content] {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+</style>
+```
+
 Add script link to footer:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/snphq/webflow-modules/form/1.0.0/index.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/snphq/webflow-modules/collapse/1.1.0/index.min.js" type="text/javascript"></script>
 ```
 
 ## Usage
 
 ### core components
 
-`name` - field key for field error.
+**single block**
 
-`wm-f-field="name"` - field attribute, add it if field has validation.
+`wm-c` - main attribute for block.
 
-`wm-f-required="name is required"` - field attribute, which trigger required validation, attribute value is error title.
+`wm-c="open"` - "open" value shows hidden content by default.
 
-`wm-f-email="must be email"` - field attribute, which trigger is email validation, attribute value is error title.
+`wm-c-content` - attribute for hidden content.
 
-`wm-f-field-error="name"` - optional text block with error.
+`wm-c-btn` - collapse button attribute.
 
-`autosize` - optional attribute for textarea, set height based on content.
+**one visible block from list**
+
+`wm-c-list` - main attribute for blocks wrapper.
+
+`wm-c-item` - main attribute for block.
+
+`wm-c-item="open"` - "open" value shows hidden content by default.
+
+`wm-c-content` and `wm-c-btn` same as for the single block.
+
+**styles**
+
+`m_wm-c-open` - classname, added to the collapse button when content visible, add styles for open state if you need it.
 
 ### - Simple copy / paste from webflow account (recommended)
 
-Copy prepared block with modal from SNP webflow account: "modules" folder, "Form" project. Then customize "form" and nested elements with your own classes and designs.
-
-Add error styles for field and field-error with classname `m_wm-f-field-error`.
+Copy prepared block with modal from SNP webflow account: "modules" folder, "Collapse" project. Then customize elements with your own classes and designs.
 
 ### - Creating html and styles from scratch
 
-**html structure:**
+**html structure for single block:**
 ```html
-<form wm-f class="form" novalidate>
-  <div>
-    <input
-      wm-f-field="name"
-      wm-f-required="name is required"
-      class="input"
-      placeholder="name"
-    />
-    <div wm-f-field-error="name" class="field-error"></div>
+<div wm-c="open">
+  <div wm-c-content>
+    <br>
+    Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Imperdiet dui accumsan sit amet nulla facilisi morbi. Porta nibh venenatis cras sed felis eget velit. Aliquet eget sit amet tellus cras adipiscing enim. Augue ut lectus arcu bibendum at varius vel pharetra vel. Sit amet nisl purus in mollis.
+  </div>
+  <div wm-c-btn>collapse button</div>
+</div>
+```
+
+**html structure for list:**
+```html
+<div wm-c-list>
+  <div wm-c-item="open">
+    <div wm-c-btn>collapse button</div>
+    <div wm-c-content>
+      <br>
+      Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Imperdiet dui accumsan sit amet nulla facilisi morbi. Porta nibh venenatis cras sed felis eget velit. Aliquet eget sit amet tellus cras adipiscing enim. Augue ut lectus arcu bibendum at varius vel pharetra vel. Sit amet nisl purus in mollis.
+    </div>
   </div>
 
-  <div>
-    <input
-      wm-f-field="email"
-      wm-f-required="email is required"
-      wm-f-email="must be email"
-      class="input"
-      placeholder="email"
-    />
-    <div wm-f-field-error="email" class="field-error"></div>
+  <div wm-c-item>
+    <div wm-c-btn>collapse button</div>
+    <div wm-c-content>
+      <br>
+      Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Imperdiet dui accumsan sit amet nulla facilisi morbi. Porta nibh venenatis cras sed felis eget velit. Aliquet eget sit amet tellus cras adipiscing enim. Augue ut lectus arcu bibendum at varius vel pharetra vel. Sit amet nisl purus in mollis.
+    </div>
   </div>
 
-  <textarea autosize placeholder="message" class="input"></textarea>
-
-  <button type="submit" class="button">submit</button>
-</form>
+  <div wm-c-item>
+    <div wm-c-btn>collapse button</div>
+    <div wm-c-content>
+      <br>
+      Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare. Imperdiet dui accumsan sit amet nulla facilisi morbi. Porta nibh venenatis cras sed felis eget velit. Aliquet eget sit amet tellus cras adipiscing enim. Augue ut lectus arcu bibendum at varius vel pharetra vel. Sit amet nisl purus in mollis.
+    </div>
+  </div>
+</div>
 ```
 
 **styles:**
 ```css
-textarea {
-  resize: none;
-}
-
-.button {
-  font-size: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 15px;
-  background-color: #b18c3c;
-  display: inline-block;
-  user-select: none;
-  border: none;
-  color: $white;
-}
-
-.form {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.input {
-  width: 100%;
-  padding: 5px 0;
-  background-color: transparent;
-  font-size: 20px;
-  outline: none;
-  margin: 0;
-  border: none;
-  color: $white;
-  border-bottom: 1px solid #d7dae0;
-}
-
-.input.m_wm-f-field-error {
-  border-color: $red;
-}
-
-.field-error {
-  margin-top: 10px;
-  color: $white;
-  opacity: 0;
-}
-
-.field-error.m_wm-f-field-error {
-  opacity: 1;
+[wm-c-content] {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
 }
 ```
