@@ -5,3 +5,5 @@
 # [MODAL / MOBILE MENU](modal) ([DEMO](https://modal-mobile-menu.webflow.io/))
 
 # [FORM](form) ([DEMO](https://form-63d2ee.webflow.io/))
+
+# [COLLAPSE](collapse) ([DEMO](https://collapse-bdd35e.webflow.io/))
