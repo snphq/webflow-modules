@@ -24,7 +24,7 @@ Add script link to footer:
 
 ### core components
 
-**single block**
+***single block***
 
 `wm-c` - main attribute for block.
 
@@ -34,7 +34,7 @@ Add script link to footer:
 
 `wm-c-btn` - collapse button attribute.
 
-**one visible block from list**
+***one visible block from list***
 
 `wm-c-list` - main attribute for blocks wrapper.
 
@@ -44,7 +44,7 @@ Add script link to footer:
 
 `wm-c-content` and `wm-c-btn` same as for the single block.
 
-**styles**
+***styles***
 
 `m_wm-c-open` - classname, added to the collapse button when content visible, add styles for open state if you need it.
 
